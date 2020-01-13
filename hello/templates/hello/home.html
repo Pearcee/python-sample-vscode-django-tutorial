@@ -6,22 +6,20 @@
     <h2>Logged messages</h2>
 
     {% if message_list %}
-        <table class="message_list">
+        <table>
             <thead>
             <tr>
                 <th>Date</th>
-                <th>Time</th>
+                <th>Name</th>
                 <th>Message</th>
             </tr>
             </thead>
             <tbody>
             {% for message in message_list %}
                 <tr>
-                    <td>{{ message.log_date | date:'d M Y' }}</td>
-                    <td>{{ message.log_date | time:'H:i:s' }}</td>
-                    <td>
-                        {{ message.message }}
-                    </td>
+                    <td data-label="Date ">{{ message.log_date | date:'d/m/y H:i:s' }}</td data-label="Message ">
+                    <td data-label="Name ">Name</td data-label="Message ">
+                    <td data-label="Message ">{{ message.message }}</td data-label="Message ">
                 </tr>
             {% endfor %}
             </tbody>
