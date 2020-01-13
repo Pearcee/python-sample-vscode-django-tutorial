@@ -108,3 +108,12 @@ static_collected
 
 # Exclude machine-specific vs code settings
 .vscode/settings.json
+
+*.pyc
+*~
+/.vscode
+__pycache__
+myvenv
+db.sqlite3
+/static
+.DS_Store
